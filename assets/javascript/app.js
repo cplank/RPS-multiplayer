@@ -48,6 +48,8 @@ $("#jake-button").on("click", function () {
 
 $("img").on("click", function () {
     player.choice = ($(this)).attr("data-name")
+    database.ref(player.choice + "/").set(choice)
+
 })
 
 //Let's make our object
@@ -59,17 +61,16 @@ let player = {
     losses: lossCount
 }
 
-//Upload to database
-
 console.log(player)
 
+
 //Check in with Firebase to see if anything has changed
-database.ref().on(function (Snapshot) {
-    console.log(Snapshot.val());
-    let heroChoice = Snapshot.val().choice;
-    let heroWins = Snapshot.val().winCount;
-    let heroLosses = Snapshot.val().lossCount;
-})
+// database.ref().on(function (Snapshot) {
+//     console.log(Snapshot.val());
+//     let heroChoice = Snapshot.val().choice;
+//     let heroWins = Snapshot.val().winCount;
+//     let heroLosses = Snapshot.val().lossCount;
+// })
 
 
 
