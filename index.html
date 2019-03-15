@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Real Time Rock, Paper, Scissors</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Choose your hero!</h1>
+            </div>
+        </div>
+
+        <div class="hero container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="assets/images/jake.png" alt="Jake the Dog">
+                        <div class="card-body" id="jake-background">
+                            <h5 class="card-title">Jake</h5>
+                            <p class="card-text">"Great Jake quote here"</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card float-right" style="width: 18rem;">
+                        <img id="finn-background" class="card-img-top" src="assets/images/Finn-PNG-File.png"
+                            alt="Finn the Human">
+                        <div class="card-body">
+                            <h5 class="card-title">Finn</h5>
+                            <p class="card-text">"Great Finn quote goes here"</p>
+                            <a href="#" class="btn btn-primary">Mathematical!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="weapon" class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="float-right">Paper Pete</p>
+                    <img id="paper" class="float-right" src="assets/images/Paper_Pete.png" />
+                </div>
+                <div class="col-md-4" id="ax">
+                    <p class="text-center">Marceline's Axe</p>
+                    <img class="center-block" src="assets/images/axe.png" />
+                </div>
+                <div class="col-md-4">
+                    <p class="float-left">Rock Person</p>
+                    <img id="rock" class="float-left" src="assets/images/rock.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+
+    <!-- jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <!-- Ajax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
