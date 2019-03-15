@@ -25,24 +25,26 @@
         <div class="hero container-fluid">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="assets/images/jake.png" alt="Jake the Dog">
-                        <div class="card-body" id="jake-background">
-                            <h5 class="card-title">Jake</h5>
-                            <p class="card-text">"Great Jake quote here"</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="float-right card" style="width: 18rem;">
+                        <img class="card-img-top" src="assets/images/FinnFORREAL.jpg" alt="Finn the Human">
+                        <div class="card-body">
+                            <h5 class="card-title">Finn</h5>
+                            <p class="card-text">"Great Finn quote here"</p>
+                            <button data-name="Finn" id="finn-button"
+                                class="hero-button btn btn-primary">Mathematical!</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6">
-                    <div class="card float-right" style="width: 18rem;">
-                        <img id="finn-background" class="card-img-top" src="assets/images/Finn-PNG-File.png"
-                            alt="Finn the Human">
+                    <div class="card float-left" style="width: 18rem;">
+                        <img id="finn-background" class="card-img-top" src="assets/images/JakeFORREAL.jpg"
+                            alt="Jake the Dog">
                         <div class="card-body">
-                            <h5 class="card-title">Finn</h5>
-                            <p class="card-text">"Great Finn quote goes here"</p>
-                            <a href="#" class="btn btn-primary">Mathematical!</a>
+                            <h5 class="card-title">Jake</h5>
+                            <p class="card-text">"Great Jake quote goes here"</p>
+                            <button id="jake-button" data-name="Jake" class="hero-button btn btn-primary">Team
+                                Dignified</button>
                         </div>
                     </div>
                 </div>
@@ -52,16 +54,16 @@
         <div id="weapon" class="container-fluid">
             <div class="row">
                 <div class="col-md-4">
-                    <p class="float-right">Paper Pete</p>
-                    <img id="paper" class="float-right" src="assets/images/Paper_Pete.png" />
+                    <p class="float-right">Rock Person</p>
+                    <img data-name="rock" id="rock" class="float-right" src="assets/images/rock.png" />
                 </div>
-                <div class="col-md-4" id="ax">
-                    <p class="text-center">Marceline's Axe</p>
-                    <img class="center-block" src="assets/images/axe.png" />
+                <div class="col-md-4" id="paper">
+                    <p class="text-center">Paper Pete</p>
+                    <img data-name="paper" class="center-block" src="assets/images/Paper_Pete.png" />
                 </div>
                 <div class="col-md-4">
-                    <p class="float-left">Rock Person</p>
-                    <img id="rock" class="float-left" src="assets/images/rock.png" />
+                    <p class="float-left">Marceline's Axe</p>
+                    <img data-name="scissors" id="axe" class="float-left" src="assets/images/axe.png" />
                 </div>
             </div>
         </div>

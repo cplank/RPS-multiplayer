@@ -10,7 +10,7 @@ var config = {
 };
 firebase.initializeApp(config);
 
-  //------------------------------------------------//
+//------------------------------------------------//
 
 //See an image of Finn and an image of Jake with buttons to pick a hero. 
 //users pick which player they want to play as, that input is stored in Firebase. When Finn is claimed 
@@ -23,3 +23,51 @@ firebase.initializeApp(config);
 
 //Each user's win or loss counter increases accordingly. A button appears asking if users if they
 //want to play again. If both users say yes, the game resets but the counters stay. 
+
+//Set Items in Firebase 
+
+let database = firebase.database();
+let hero = "";
+let choice = "";
+let winCount = 0;
+let lossCount = 0;
+
+
+//Grab user input (all the jQuery)
+$("#finn-button").on("click", function () {
+    player.hero = ($(this)).attr("data-name")
+    database.ref(player.hero + "/").set(player)
+})
+
+$("#jake-button").on("click", function () {
+    player.hero = ($(this)).attr("data-name")
+    database.ref(player.hero + "/").set(player)
+})
+
+$("img").on("click", function () {
+    player.choice = ($(this)).attr("data-name")
+})
+
+//Let's make our object
+
+let player = {
+    hero: hero,
+    choice: choice,
+    wins: winCount,
+    losses: lossCount
+}
+
+//Upload to database
+
+console.log(player)
+
+//Check in with Firebase to see if anything has changed
+database.ref().on("child_added", function (childSnapshot) {
+    console.log(childSnapshot.val());
+    let heroChoice = childSnapshot.val().choice;
+    let heroWins = childSnapshot.val().winCount;
+    let heroLosses = childSnapshot.val().lossCount;
+})
+
+//Store it all in variables
+// let heroName = childSnapshot.val().hero;

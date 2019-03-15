@@ -36,6 +36,7 @@ body {
 
 #weapon {
     position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 
 .center-block {
@@ -43,16 +44,17 @@ body {
     margin-left: auto;
     margin-right: auto;
  }
- #paper {
+ #rock {
      position: absolute;
      bottom: 20px;
      left: 250px;
  }
 
- #rock {
+ #axe {
      position: absolute;
-     bottom: 20px;
-     right: 350px;
+     bottom: -10px;
+     right: 350px; 
+     transform: skew(-20deg);    
  }
 
  p {
