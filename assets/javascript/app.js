@@ -37,11 +37,13 @@ let lossCount = 0;
 $("#finn-button").on("click", function () {
     player.hero = ($(this)).attr("data-name")
     database.ref(player.hero + "/").set(player)
+    $("#finn-button").hide()
 })
 
 $("#jake-button").on("click", function () {
     player.hero = ($(this)).attr("data-name")
     database.ref(player.hero + "/").set(player)
+    $("#jake-button").hide()
 })
 
 $("img").on("click", function () {
@@ -62,12 +64,13 @@ let player = {
 console.log(player)
 
 //Check in with Firebase to see if anything has changed
-database.ref().on("child_added", function (childSnapshot) {
-    console.log(childSnapshot.val());
-    let heroChoice = childSnapshot.val().choice;
-    let heroWins = childSnapshot.val().winCount;
-    let heroLosses = childSnapshot.val().lossCount;
+database.ref().on(function (Snapshot) {
+    console.log(Snapshot.val());
+    let heroChoice = Snapshot.val().choice;
+    let heroWins = Snapshot.val().winCount;
+    let heroLosses = Snapshot.val().lossCount;
 })
 
-//Store it all in variables
-// let heroName = childSnapshot.val().hero;
+
+
+
